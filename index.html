@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>填写地址</title>
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+		<meta name="viewport" id="viewportMeta"> 
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style/index.css?t=3" /> 
+	</head>
+	<body> 
+		<ul class="address">
+			<li>
+				<font>姓 &nbsp;&nbsp;&nbsp;&nbsp; 名:</font> <input type="text" name="" id="userReceiveName" value="" />
+			</li>
+			<li>
+				<font>联系电话: </font> <input type="tel" name="" id="userMobile" value="" />
+			</li>
+			<li>
+				<font>选择地区: </font> <input type="text" id="getArea" placeholder="点击选择地区" value="" readonly class="myNeedFocus">
+			</li>
+			<li>
+				<font>详细地址: </font> <input type="text" id="userAddress" placeholder="" value="" placeholder="街道，楼牌号">
+			</li>
+		</ul>
+		<!--识别地址-->
+		<div class="distinguishBox">
+			<textarea name="textarea" id="textarea" rows="4" placeholder="粘贴或输入整段地址，点击'识别地址'自动拆分姓名、电话和地址。例如张三，13500000000，广东省中山市某镇某街001号"></textarea>
+			<button class="distBtn" onclick="getAddress()">识&nbsp;&nbsp;别</button>
+		</div> 
+		<!-- pcassCode,地址智能识别的主要数据源 -->
+		<script src="js/pcasCode.js?t=20203261520"></script>
+		<!-- address_parse,地址智能识别的方法集 -->
+		<script src="js/address_parse.js?t=20203261520"></script>
+		<!-- area,地址选择控件 -->
+		<script src="js/area.js?t=20203261520"></script>
+		<script src="json/index.json?t=20203261520"></script>
+		<!-- addAddress,本页面的js，负责调用各js -->
+		<script src="js/addAddress.js?t=20203271111"></script>
+	</body>
+</html>
